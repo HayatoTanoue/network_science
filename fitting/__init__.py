@@ -1,1 +1,1 @@
-from network_science.fitting import *
+from network_science.fitting.fitting import *
