@@ -1,6 +1,8 @@
 import networkx as nx
 import numpy as np
 
+__all__ = ["no_preferential_attachment", "no_growth_barabasi"]
+
 def no_preferential_attachment(n, m):
     """
     優先的選択がないバラバシアルバートグラフ
