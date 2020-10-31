@@ -91,8 +91,7 @@ def degree_distribution(G, plot=False, save_name=None):
     
     array_k = np.array(deg)
     #出現回数を割合に変換
-    array_cnt = np.array(cnt)
-    array_cnt = array_cnt / nx.number_of_nodes(G)
+    array_cnt = np.array(cnt) / nx.number_of_nodes(G)
     
     y_fit, l_popt = exp_fit( array_k, array_cnt)
     
