@@ -53,11 +53,15 @@ def exp_plot(array_x, array_y, y_fit, l_popt, save_name=None):
     """
     sns.set()
     ax=plt.subplot(1,1,1)
-    ax.scatter(array_x, array_y, color='lime')
-    ax.plot(array_x, y_fit, label='model', color='magenta')
-    plt.text(1.0, 1.0, 'gamma={}'.format(-(l_popt[0])) ,ha='right', va='top',transform=ax.transAxes)
+    ax.scatter(array_x, array_y, color='lime') #散布図
+    ax.plot(array_x, y_fit, label='model', color='magenta') #近似直線
+    #近似の指数を表示
+    plt.text(1.0, 1.0, 'gamma={}'.format(l_popt[0]) ,ha='right', va='top',transform=ax.transAxes)
+    #両軸を対数に
     plt.gca().set_xscale("log")
     plt.gca().set_yscale("log")
+
+    plt.gca().set_ylim(top=1) #y軸の最大を1に固定
     
     if save_name:
         plt.savefig(save_name + ".png")
@@ -88,7 +92,7 @@ def degree_distribution(G, plot=False, save_name=None):
     array_k = np.array(deg)
     #出現回数を割合に変換
     array_cnt = np.array(cnt)
-    array_cnt = array_cnt/len(degree_count)
+    array_cnt = array_cnt / nx.number_of_nodes(G)
     
     y_fit, l_popt = exp_fit( array_k, array_cnt)
     
