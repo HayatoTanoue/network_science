@@ -12,8 +12,8 @@ __author__ = 'Hayato Tanoue'
 __version__ = '0.1'
 __license__ = 'MIT'
 
-import network_science.chapter5
 from network_science.chapter5 import *
+import network_science.chapter5
 
-import network_science.fitting
 from network_science.fitting import *
+import network_science.fitting
