@@ -1,8 +1,8 @@
-
+# coding: utf-8
 '''
     network_science
     =====
-    Network Science(barabasi-albert) 内の便利そうなものをゆったり実装
+    Network Science(barabasi-albert) functions
 
     Repository: https://github.com/HayatoTanoue/network_science
     License: MIT
