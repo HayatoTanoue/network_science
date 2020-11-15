@@ -12,3 +12,14 @@ Network Science を読んでいて、使えそうなものを実装。
 * numpy
 * scipy
 * seaborn
+
+
+## Installation
+
+with Python 3.6+
+
+```sh
+$ pip install -i https://test.pypi.org/simple/ network-science
+```
+
+ちゃんと整えたら本番PyPIにアップします。
