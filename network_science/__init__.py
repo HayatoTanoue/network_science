@@ -9,7 +9,7 @@
 '''
 
 __author__ = 'Hayato Tanoue'
-__version__ = '0.2'
+__version__ = '0.3'
 __license__ = 'MIT'
 
 from network_science.chapter5 import *
