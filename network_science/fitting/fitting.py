@@ -123,13 +123,13 @@ def degree_correlation(G, plot=False, save_name=None):
             l_popt[1] : 冪乗の係数 b  
     """
     #次数リスト
-    degree = list(dict(G.degree()).values())
+    degree = dict(G.degree())
 
     #近傍ノードの平均次数
     neighbor_ave_degree = nx.average_neighbor_degree(G)
 
     #各次数の出現回数
-    degree_count = collections.Counter(sorted( degree, reverse=True))
+    degree_count = collections.Counter(sorted( degree.values(), reverse=True))
 
     #knn(ki) 次数相関
     average_k_nn = []
