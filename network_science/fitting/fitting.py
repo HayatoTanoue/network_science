@@ -134,7 +134,7 @@ def degree_correlation(G, plot=False, save_name=None):
     #knn(ki) 次数相関
     average_k_nn = []
     for k in degree_count.keys():
-        node_nums = [num for num in range(nx.number_of_nodes(G)) if degree[num] == k]
+        node_nums = [num for num in G.nodes() if degree[num] == k]
         average_k_nn.append((k, np.average([neighbor_ave_degree[i] for i in node_nums])) )
 
     array_k = np.array( [k[0] for k in average_k_nn] )
