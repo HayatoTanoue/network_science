@@ -15,5 +15,8 @@ __license__ = 'MIT'
 from network_science.chapter5 import *
 import network_science.chapter5
 
+from network_science.original import *
+import network_science.original
+
 from network_science.fitting import *
 import network_science.fitting
